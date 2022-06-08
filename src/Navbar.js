@@ -3,6 +3,7 @@ import logo from "./starter-code/assets/shared/logo.svg";
 import hamburger from "./starter-code/assets/shared/icon-hamburger.svg";
 
 const Navbar = () => {
+
     return ( 
         <nav className="navbar">
             <div className="nav-container">
@@ -12,6 +13,8 @@ const Navbar = () => {
                 </button>
             </div>
         </nav>
+
+        
     );
 }
  

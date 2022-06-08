@@ -11,9 +11,14 @@ h1, h2, h3, h4, h5, h6{
   font-family: 'Bellefair', serif;
 }
 
-span, p, button{
+span, p, button, a{
   font-family: 'Barlow', sans-serif;
   color: #D0D6F9;
+}
+
+button{
+  background-color: transparent;
+  border: none;
 }
 
 code {
