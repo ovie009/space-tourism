@@ -1,11 +1,13 @@
 .home-section{
     width: 100%;
     height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
 }
 
 .home-container{
     width: 100%;
-    height: 100%;
+    height: min(850px, 100%);
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -17,13 +19,16 @@
     height: 60%;
     display: flex;
     flex-flow: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 2vh;
+    align-items: center;
     text-align: center;
 }
 
 .home-heading{
     text-transform: uppercase;
-    font-size: 150px;
+    font-size: 175px;
+    /* box-sizing: unset; */
 }
 
 .subheading{
@@ -40,6 +45,8 @@
 .homee-paragraph{
     line-height: 30px;
     padding: 10px;
+    width: 90%;
+    max-width: 50ch;
 }
 
 .explore-wrapper{
@@ -47,10 +54,12 @@
     height: 40%;
     width: 100%;
     place-items: center;
+    margin-block: 10px;
 }
 
 .explore{
-    width: 175px;
+    width: 33%;
+    padding: 10px;
     color: #0B0D17;
     aspect-ratio: 1/1;
     border-radius: 50%;
@@ -58,4 +67,15 @@
     font-family: 'Bellefair', serif;
     text-transform: uppercase;
     background-color: #FFFFFF;
+    box-sizing: unset;
+}
+
+@media screen and (min-width: 768px){
+    .explore{
+        font-size: 35px;
+    }
+
+    .homee-paragraph{
+        font-size: larger;
+    }
 }

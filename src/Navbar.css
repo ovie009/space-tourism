@@ -18,7 +18,7 @@
     height: 55px;
 }
 
-#toggle-list{
+.toggle-list{
     background-color: none;
     border: none;
     background-color: transparent;
@@ -26,7 +26,7 @@
     width: fit-content;
 }
 
-#toggle-list > img{
+.toggle-list > img{
     height: 40%;
 }
 
@@ -88,4 +88,11 @@
 
 .side-link strong{
     margin-right: 15px;
+}
+
+
+@media screen and (min-width: 768px){
+    .toggle-list{
+        display: none;
+    }
 }

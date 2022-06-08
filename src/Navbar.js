@@ -14,6 +14,7 @@ const Navbar = () => {
         let sideBarList  = document.querySelector(".sidebar-list");
         setSlide(!slide);
         sideBarList.style.visibility = slide ? 'visible' : 'hidden';
+        // sideBar.style.width = slide ? 'block' : 'none';
         sideBar.style.width = slide ? '75vw' : '0vw';
         sideBar.style.left = slide ? '25vw' : '100vw';
         sideBar.style.backdropFilter = slide ? 'blur(30px)' : 'blur(0px)';
@@ -24,7 +25,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="nav-container">
                 <img src={ logo } alt="space tourism logo" className="logo-icon"/>
-                <button type="button" id="toggle-list" onClick={showSidebar}>
+                <button type="button" className="toggle-list" onClick={showSidebar}>
                     <img src={hamburger} alt="Hamburger Icon" />
                 </button>
             </div>
