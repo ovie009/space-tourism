@@ -19,6 +19,11 @@ span, p, button, a{
 button{
   background-color: transparent;
   border: none;
+  cursor: pointer;
+}
+
+a{
+  cursor: pointer;
 }
 
 code {

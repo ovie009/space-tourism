@@ -1,0 +1,21 @@
+.crew{
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(/src/starter-code/assets/crew/background-crew-mobile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+@media screen and (min-width: 768px){
+    .crew{
+        background-image: url(/src/starter-code/assets/crew/background-crew-tablet.jpg);
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .crew{
+        background-image: url(/src/starter-code/assets/crew/background-crew-desktop.jpg);
+    }
+}
