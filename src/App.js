@@ -1,10 +1,8 @@
-import './App.css';
 import Navbar from "./Navbar.js";
 import Home from "./Home.js";
 import Destination from './Destination.js';
 import Crew from './Crew.js';
 import Technology from './Technology.js';
-import { ReactDOM } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 

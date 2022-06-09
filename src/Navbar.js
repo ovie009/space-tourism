@@ -4,10 +4,37 @@ import hamburger from "./starter-code/assets/shared/icon-hamburger.svg";
 import close from './starter-code/assets/shared/icon-close.svg';
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Navbar = () => {
     
     const [slide, setSlide] = useState(false);
+    
+    const location = useLocation();
+    
+    let pathName = location.pathname;
+
+    console.log(pathName); // path is /contact
+
+    useEffect(() => {
+        showSidebar();
+    }, [pathName])
+
+    const navLinks = [
+        { id: 1, link: '/', text: 'Home', class: ''},
+        { id: 2, link: '/destination', text: 'destination', class: ''},
+        { id: 3, link: '/crew', text: 'crew', class: ''},
+        { id: 4, link: '/technology', text: 'technology', class: ''}
+    ]
+
+    navLinks.forEach(navLink => {
+        if (navLink.link === pathName ) {
+            navLink.class = 'nav-list-items active-page';
+        } else {
+            navLink.class = 'nav-list-items inactive-page';
+        }
+    });
     
     const showSidebar = () => {
         let sideBar  = document.querySelector(".sidebar");
@@ -29,7 +56,7 @@ const Navbar = () => {
                     <img src={hamburger} alt="Hamburger Icon" />
                 </button>
                 <ul className="nav-list">
-                    <li className="nav-list-items active-page">
+                    {/* <li className="nav-list-items active-page">
                         <Link to="/" className="nav-link">Home</Link>
                     </li>
                     <li className="nav-list-items">
@@ -40,7 +67,14 @@ const Navbar = () => {
                     </li>
                     <li className="nav-list-items">
                         <Link to="/technology" className="nav-link">technology</Link>
-                    </li>
+                    </li> */}
+                    {
+                        navLinks.map((navLink) => (
+                            <li className={navLink.class} key={navLink.id}>
+                                <Link to={navLink.link} className="nav-link">{navLink.text}</Link>
+                            </li>
+                        ))
+                    }
                     <hr className="nav-line" />
                 </ul>
             </div>

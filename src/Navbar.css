@@ -16,7 +16,7 @@
 }
 
 .logo-icon{
-    height: 55px;
+    height: 50px;
     margin-inline: 20px;
 }
 
@@ -116,8 +116,18 @@
     border-bottom: 5px solid #FFFFFF;
 }
 
+.inactive-page:hover{
+    /* border-bottom: 5px solid rgba(255, 255, 255, 0.5); */
+    box-shadow: inset 0 -5px 0 0px #D0D6F9;
+}
+
+.inactive-page:hover .nav-link{
+    color: #D0D6F9;
+}
+
 .nav-link{
     text-decoration: none;
+    color: #FFFFFF;
     /* font-stretch: extra-condensed; */
 }
 
