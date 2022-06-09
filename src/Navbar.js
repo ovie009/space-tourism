@@ -28,6 +28,21 @@ const Navbar = () => {
                 <button type="button" className="toggle-list" onClick={showSidebar}>
                     <img src={hamburger} alt="Hamburger Icon" />
                 </button>
+                <ul className="nav-list">
+                    <li className="nav-list-items active-page">
+                        <a href="/" className="nav-link">Home</a>
+                    </li>
+                    <li className="nav-list-items">
+                        <a href="/destination" className="nav-link">destination</a>
+                    </li>
+                    <li className="nav-list-items">
+                        <a href="/crew" className="nav-link">crew</a>
+                    </li>
+                    <li className="nav-list-items">
+                        <a href="/technology" className="nav-link">technology</a>
+                    </li>
+                    <hr className="nav-line" />
+                </ul>
             </div>
             <div className="sidebar">
                 <div className="sidebar-container">
@@ -39,19 +54,15 @@ const Navbar = () => {
                     <ul className="sidebar-list">
                         <li className="sidebar-list-items">
                             <a href="/" className="side-link"> <strong>00</strong>  Home</a>
-                            {/* <Link to="/" className="side-link"> 00 Home</Link> */}
                         </li>
                         <li className="sidebar-list-items">
                             <a href="/destination" className="side-link"> <strong>01</strong> destination</a>
-                            {/* <Link to="/destination" className="side-link"> 01 destination</Link> */}
                         </li>
                         <li className="sidebar-list-items">
                             <a href="/crew" className="side-link"><strong>02</strong> crew</a>
-                            {/* <Link to="/crew" className="side-link"> 02 crew</Link> */}
                         </li>
                         <li className="sidebar-list-items">
                             <a href="/technology" className="side-link"><strong>03</strong> technology</a>
-                            {/* <Link to="/technology" className="side-link"> 03 technology</Link> */}
                         </li>
                     </ul>
                 </div>
