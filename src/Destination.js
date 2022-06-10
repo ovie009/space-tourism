@@ -7,17 +7,28 @@ const Destination = () => {
         <main className="destination">
             <section className="destination-section">
                 <div className="preview-wrapper">
-                    <p className='destination-preview-text'>01 pick your destination</p>
+                    <p className='destination-preview-text'>
+                        01 
+                        <span>
+                            pick your destination
+                        </span> 
+                    </p>
                     <div className="destination-image-wrapper">
-                    <img src={moonImg} alt="moon imaage" />
+                        <img className='destiantion-image' src={moonImg} alt="moon imaage" />
                     </div>
                 </div>
                 <div className="text-wrapper">
                     <ul className="destination-list">
-                        <li className="destination-list-items">
+                        <li className="destination-list-items active-page">
                             <Link to="/destination/">moon</Link>
+                        </li>
+                        <li className="destination-list-items">
                             <Link to="/destination/mars">mars</Link>
+                        </li>
+                        <li className="destination-list-items">
                             <Link to="/destination/europa">europa</Link>
+                        </li>
+                        <li className="destination-list-items">
                             <Link to="/destination/titan">titan</Link>
                         </li>
                     </ul>
@@ -26,7 +37,7 @@ const Destination = () => {
                         
                         See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
                         regain perspective and come back refreshed. While you’re there, take in some history 
-                        by visiting the Luna 2 and Apollo 11 landing sites.
+                        by visiting the Luna 2 and Apollo 711 landing sites.
 
                     </p>
                     <hr className="destination-line" />

@@ -110,6 +110,10 @@
     .home-text-wrapper{
         margin-top: 50px;
     }
+
+    .explore{
+        width: 60%;
+    }
 }
 
 @media screen and (min-width: 1024px){

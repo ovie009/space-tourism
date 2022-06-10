@@ -18,7 +18,9 @@ const Navbar = () => {
     console.log(pathName); // path is /contact
 
     useEffect(() => {
-        showSidebar();
+        if (window.innerWidth < 768) {
+            showSidebar();
+        }
     }, [pathName])
 
     const navLinks = [
