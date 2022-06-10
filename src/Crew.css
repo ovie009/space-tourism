@@ -19,3 +19,88 @@
         background-image: url(/src/starter-code/assets/crew/background-crew-desktop.jpg);
     }
 }
+
+.crew-section{
+    display: grid;
+    width: 100%;
+    padding-inline: 30px;
+}
+
+.crew-preview-text{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.crew-preview-text strong{
+    width: 100%;
+    text-align: center;
+    color: gray;
+    margin-right: 10px;
+}
+
+.crew-image-wrapper{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.crew-image{
+    height: 90%;
+}
+
+.crew-list{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.crew-list-items{
+    list-style-type: none;
+    background-color: rgba(128, 128, 128, 0.4);
+    width: 10px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
+
+.active-crew{
+    background-color: #FFFFFF;
+}
+
+.inactive-crew:hover{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.crew-title{
+    width: 100%;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: darkgray;
+    text-align: center;
+    font-size: 18px;
+    margin-block: 10px;
+}
+
+.crew-name{
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+}
+
+.crew-about{
+    width: 100%;
+    text-align: center;
+    margin-block: 10px;
+    line-height: 25px;
+}

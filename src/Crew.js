@@ -11,28 +11,24 @@ const Crew = () => {
                     meet your crew
                 </p>
                 <div className="crew-image-wrapper">
-                    <img src={douglasHurley} alt="" />
+                    <img src={douglasHurley} alt="" className="crew-image" />
                 </div>
                 <ul className='crew-list'>
-                    <li className="crew-list-items">
-                        <link rel="stylesheet" href="/crew/a" className="crew-link active-crew" />
+                    <li className="crew-list-items active-crew">
+                        <link rel="stylesheet" href="/crew/a" className="crew-link"/>
                     </li>
-                    <li className="crew-list-items">
-                        <link rel="stylesheet" href="/crew/a" className="crew-link inactive-crew" />
+                    <li className="crew-list-items inactive-crew">
+                        <link rel="stylesheet" href="/crew/b" className="crew-link" />
                     </li>
-                    <li className="crew-list-items">
-                        <link rel="stylesheet" href="/crew/a" className="crew-link inactive-crew" />
+                    <li className="crew-list-items inactive-crew">
+                        <link rel="stylesheet" href="/crew/b" className="crew-link" />
                     </li>
-                    <li className="crew-list-items">
-                        <link rel="stylesheet" href="/crew/a" className="crew-link inactive-crew" />
+                    <li className="crew-list-items inactive-crew">
+                        <link rel="stylesheet" href="/crew/b" className="crew-link" />
                     </li>
                 </ul>
-                <h5 className="crew-title">
-                    commander
-                </h5>
-                <h3 className="crew-name">
-                    Douglas Hurley
-                </h3>
+                <h5 className="crew-title">commander</h5>
+                <h3 className="crew-name">Douglas Hurley</h3>
                 <p className="crew-about">
                     Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
                     and former NASA astronaut. He launched into space for the third time as 
