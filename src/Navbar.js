@@ -18,7 +18,7 @@ const Navbar = () => {
     // const oldPathName = pathName;
 
     // console.log(pathName); // path is /contact
-    console.log(slide);
+    // console.log(slide);
 
     useEffect(() => {
         let forwardSlashCount = pathName.split('/').length - 1;
