@@ -15,23 +15,27 @@ const Navbar = () => {
     
     let pathName = location.pathname;
 
-    console.log(pathName); // path is /contact
+    // const oldPathName = pathName;
+
+    // console.log(pathName); // path is /contact
+    console.log(slide);
 
     useEffect(() => {
-        if (window.innerWidth < 768) {
+        let forwardSlashCount = pathName.split('/').length - 1;
+        if (window.innerWidth < 768 && forwardSlashCount <= 1) {
             showSidebar();
         }
     }, [pathName])
 
     const navLinks = [
-        { id: 1, link: '/', text: 'Home', class: ''},
+        { id: 1, link: '/home', text: 'Home', class: ''},
         { id: 2, link: '/destination', text: 'destination', class: ''},
         { id: 3, link: '/crew', text: 'crew', class: ''},
         { id: 4, link: '/technology', text: 'technology', class: ''}
     ]
 
     navLinks.forEach(navLink => {
-        if (navLink.link === pathName ) {
+        if ( pathName.startsWith(navLink.link) ) {
             navLink.class = 'nav-list-items active-page';
         } else {
             navLink.class = 'nav-list-items inactive-page';
@@ -47,29 +51,19 @@ const Navbar = () => {
         sideBar.style.width = slide ? '75vw' : '0vw';
         sideBar.style.left = slide ? '25vw' : '100vw';
         sideBar.style.backdropFilter = slide ? 'blur(30px)' : 'blur(0px)';
-        console.log(slide);
+        // console.log(slide);
     }
 
     return ( 
         <nav className="navbar">
             <div className="nav-container">
-                <img src={ logo } alt="space tourism logo" className="logo-icon"/>
+                <Link to="/home/">
+                    <img src={ logo } alt="space tourism logo" className="logo-icon"/>
+                </Link>
                 <button type="button" className="toggle-list" onClick={showSidebar}>
                     <img src={hamburger} alt="Hamburger Icon" />
                 </button>
                 <ul className="nav-list">
-                    {/* <li className="nav-list-items active-page">
-                        <Link to="/" className="nav-link">Home</Link>
-                    </li>
-                    <li className="nav-list-items">
-                        <Link to="/destination" className="nav-link">destination</Link>
-                    </li>
-                    <li className="nav-list-items">
-                        <Link to="/crew" className="nav-link">crew</Link>
-                    </li>
-                    <li className="nav-list-items">
-                        <Link to="/technology" className="nav-link">technology</Link>
-                    </li> */}
                     {
                         navLinks.map((navLink) => (
                             <li className={navLink.class} key={navLink.id}>

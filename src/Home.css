@@ -9,9 +9,9 @@
 }
 
 @media screen and (min-width: 768px){
-.home{
-    background-image: url(/src/starter-code/assets/home/background-home-tablet.jpg);
-}
+    .home{
+        background-image: url(/src/starter-code/assets/home/background-home-tablet.jpg);
+    }
 }
 
 @media screen and (min-width: 1024px){
@@ -98,6 +98,10 @@
     box-sizing: unset;
 }
 
+.explore:hover{
+    box-shadow: 0 0 0 120px rgba(200, 200, 200, 0.1);
+}
+
 @media screen and (min-width: 768px){
     .explore{
         font-size: 35px;
@@ -142,9 +146,27 @@
 @media screen and (min-width: 1440px){
     .home-container{
         padding-inline: 100px;
+        max-width: 1440px;
     }
+
     .explore{
         width: 70%;
         /* background-color: blue; */
     }
+
+    .subheading{
+        font-size: 25px;
+    }
+
+    .home-heading{
+        font-size: 150px;
+    }
+
+    .home-paragraph{
+        line-height: 35px;
+        font-size: 25px;
+        max-width: 60ch;
+    }
+
+    
 }
