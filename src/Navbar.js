@@ -28,10 +28,10 @@ const Navbar = () => {
     }, [pathName])
 
     const navLinks = [
-        { id: 1, link: '/home', text: 'Home', class: ''},
-        { id: 2, link: '/destination', text: 'destination', class: ''},
-        { id: 3, link: '/crew', text: 'crew', class: ''},
-        { id: 4, link: '/technology', text: 'technology', class: ''}
+        { id: 1, link: '/home', text: 'Home', class: '', number: '00'},
+        { id: 2, link: '/destination', text: 'destination', class: '', number: '01'},
+        { id: 3, link: '/crew', text: 'crew', class: '', number: '02'},
+        { id: 4, link: '/technology', text: 'technology', class: '', number: '03'}
     ]
 
     navLinks.forEach(navLink => {
@@ -67,7 +67,12 @@ const Navbar = () => {
                     {
                         navLinks.map((navLink) => (
                             <li className={navLink.class} key={navLink.id}>
-                                <Link to={navLink.link} className="nav-link">{navLink.text}</Link>
+                                <Link to={navLink.link} className="nav-link">
+                                    <strong>
+                                        {navLink.number}
+                                    </strong>
+                                    {navLink.text}
+                                </Link>
                             </li>
                         ))
                     }
