@@ -15,16 +15,16 @@ const Crew = () => {
                 </div>
                 <ul className='crew-list'>
                     <li className="crew-list-items active-crew">
-                        <link rel="stylesheet" href="/crew/a" className="crew-link"/>
+                        <Link to="/crew/a" className="crew-link"/>
                     </li>
                     <li className="crew-list-items inactive-crew">
-                        <link rel="stylesheet" href="/crew/b" className="crew-link" />
+                        <Link to="/crew/b" className="crew-link" />
                     </li>
                     <li className="crew-list-items inactive-crew">
-                        <link rel="stylesheet" href="/crew/b" className="crew-link" />
+                        <Link to="/crew/b" className="crew-link" />
                     </li>
                     <li className="crew-list-items inactive-crew">
-                        <link rel="stylesheet" href="/crew/b" className="crew-link" />
+                        <Link to="/crew/b" className="crew-link" />
                     </li>
                 </ul>
                 <h5 className="crew-title">commander</h5>
