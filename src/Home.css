@@ -31,7 +31,7 @@
     width: 100%;
     max-width: 1500px;
     margin: auto;
-    height: min(850px, 100%);
+    min-height: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -83,6 +83,7 @@
     width: 100%;
     margin-block: 10px;
     max-width: 480px;
+    /* background-color: red; */
 }
 
 .explore{
@@ -96,6 +97,20 @@
     text-transform: uppercase;
     background-color: #FFFFFF;
     box-sizing: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.explore a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .explore:hover{
@@ -135,6 +150,7 @@
         align-items: flex-end;
         justify-content: space-between;
         padding-bottom: 200px;
+        padding-left: 100px;
     }
 
     .explore{
