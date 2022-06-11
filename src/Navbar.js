@@ -16,12 +16,12 @@ const Navbar = () => {
     let pathName = location.pathname;
 
     useEffect(() => {
-        // let forwardSlashCount = pathName.split('/').length - 1;
-        // if (window.innerWidth < 768 && forwardSlashCount <= 1) {
-        //     console.log('pathchanged');
-        //     showSidebar();
-        // }
-        console.log('path changed');
+        let forwardSlashCount = pathName.split('/').length - 1;
+        if (window.innerWidth < 768 && forwardSlashCount <= 1) {
+            console.log('pathchanged');
+            showSidebar();
+        }
+        // console.log('path changed');
     }, [pathName])
 
     const navLinks = [
