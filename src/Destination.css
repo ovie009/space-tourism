@@ -5,7 +5,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-block: 120px 50px;
+    padding-block: 170px 50px;
     /* overflow: hidden; */
 }
 
@@ -206,6 +206,7 @@
     .destination-paragragh{
         text-align: left;
         line-height: 35px;
+        font-size: 20px;
     }
 
     .destination-data{
@@ -216,7 +217,7 @@
     }
 
     .destination{
-        padding-block: 120px 20px;
+        padding-block: 170px 20px;
         min-height: 100vh;
         display: flex;
         align-items: center;

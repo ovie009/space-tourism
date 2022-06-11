@@ -1,40 +1,20 @@
 import './Crew.css'
-import douglasHurley from './starter-code/assets/crew/image-douglas-hurley.png';
-import { Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Commander from './Commander';
+import Specialist from './Specialist';
+import Pilot from './Pilot';
+import Engineer from './Engineer';
 
 const Crew = () => {
     return ( 
         <main className="crew">
-            <section className="crew-section">
-                <p className="crew-preview-text">
-                    <strong>02</strong>
-                    meet your crew
-                </p>
-                <div className="crew-image-wrapper">
-                    <img src={douglasHurley} alt="" className="crew-image" />
-                </div>
-                <ul className='crew-list'>
-                    <li className="crew-list-items active-crew">
-                        <Link to="/crew/a" className="crew-link"/>
-                    </li>
-                    <li className="crew-list-items inactive-crew">
-                        <Link to="/crew/b" className="crew-link" />
-                    </li>
-                    <li className="crew-list-items inactive-crew">
-                        <Link to="/crew/b" className="crew-link" />
-                    </li>
-                    <li className="crew-list-items inactive-crew">
-                        <Link to="/crew/b" className="crew-link" />
-                    </li>
-                </ul>
-                <h5 className="crew-title">commander</h5>
-                <h3 className="crew-name">Douglas Hurley</h3>
-                <p className="crew-about">
-                    Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-                    and former NASA astronaut. He launched into space for the third time as 
-                    commander of Crew Dragon Demo-2.
-                </p>
-            </section>
+            <Routes>
+              <Route path='/' element={<Commander/>} />
+              <Route path='/commander' element={<Commander/>} />
+              <Route path='/specialist' element={<Specialist/>} />
+              <Route path='/pilot' element={<Pilot/>} />
+              <Route path='/engineer' element={<Engineer/>} />
+            </Routes>
         </main>
     );
 }

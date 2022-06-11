@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import titanImg from "./starter-code/assets/destination/image-titan.png";
-import { useLocation } from "react-router-dom";
 
 const Titan = () => {
 

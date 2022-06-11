@@ -170,4 +170,11 @@
     .nav-list strong{
         display: block;
     }
+
+    .navbar{
+        height: 150px;
+        padding-top: 50px;
+        padding-left: 50px;
+    }
+    
 }
