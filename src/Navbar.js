@@ -5,24 +5,14 @@ import close from './starter-code/assets/shared/icon-close.svg';
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
 
 const Navbar = () => {
     
-    const [slide, setSlide] = useState(false);
+    const [slide, setSlide] = useState(true);
     
     const location = useLocation();
     
     let pathName = location.pathname;
-
-    useEffect(() => {
-        let forwardSlashCount = pathName.split('/').length - 1;
-        if (window.innerWidth < 768 && forwardSlashCount <= 1) {
-            console.log('pathchanged');
-            showSidebar();
-        }
-        // console.log('path changed');
-    }, [pathName])
 
     const navLinks = [
         { id: 1, link: '/home', text: 'Home', class: '', number: '00'},
@@ -50,6 +40,8 @@ const Navbar = () => {
         sideBar.style.backdropFilter = slide ? 'blur(30px)' : 'blur(0px)';
         console.log(slide);
     }
+
+    // showSidebar();
 
     return ( 
         <nav className="navbar">
@@ -85,16 +77,16 @@ const Navbar = () => {
                     </div>
                     <ul className="sidebar-list">
                         <li className="sidebar-list-items">
-                            <Link to="/" className="side-link"> <strong>00</strong>  Home</Link>
+                            <Link to="/" className="side-link" onClick={showSidebar}> <strong>00</strong>  Home</Link>
                         </li>
                         <li className="sidebar-list-items">
-                            <Link to="/destination" className="side-link"> <strong>01</strong> destination</Link>
+                            <Link to="/destination" className="side-link" onClick={showSidebar}> <strong>01</strong> destination</Link>
                         </li>
                         <li className="sidebar-list-items">
-                            <Link to="/crew" className="side-link"><strong>02</strong> crew</Link>
+                            <Link to="/crew" className="side-link" onClick={showSidebar}><strong>02</strong> crew</Link>
                         </li>
                         <li className="sidebar-list-items">
-                            <Link to="/technology" className="side-link"><strong>03</strong> technology</Link>
+                            <Link to="/technology" className="side-link" onClick={showSidebar}><strong>03</strong> technology</Link>
                         </li>
                     </ul>
                 </div>
