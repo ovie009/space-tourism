@@ -15,16 +15,13 @@ const Navbar = () => {
     
     let pathName = location.pathname;
 
-    // const oldPathName = pathName;
-
-    // console.log(pathName); // path is /contact
-    // console.log(slide);
-
     useEffect(() => {
-        let forwardSlashCount = pathName.split('/').length - 1;
-        if (window.innerWidth < 768 && forwardSlashCount <= 1) {
-            showSidebar();
-        }
+        // let forwardSlashCount = pathName.split('/').length - 1;
+        // if (window.innerWidth < 768 && forwardSlashCount <= 1) {
+        //     console.log('pathchanged');
+        //     showSidebar();
+        // }
+        console.log('path changed');
     }, [pathName])
 
     const navLinks = [
@@ -51,7 +48,7 @@ const Navbar = () => {
         sideBar.style.width = slide ? '75vw' : '0vw';
         sideBar.style.left = slide ? '25vw' : '100vw';
         sideBar.style.backdropFilter = slide ? 'blur(30px)' : 'blur(0px)';
-        // console.log(slide);
+        console.log(slide);
     }
 
     return ( 
