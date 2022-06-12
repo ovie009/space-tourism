@@ -5,8 +5,8 @@ import Europa from './Europa.js';
 import Titan from './Titan.js';
 import { Routes, Route } from 'react-router-dom';
 
-
 const Destination = () => {
+
     return ( 
         <main className="destination">
             <Routes>
@@ -15,7 +15,6 @@ const Destination = () => {
               <Route path='/mars' element={<Mars/>} />
               <Route path='/europa' element={<Europa/>} />
               <Route path='/titan' element={<Titan/>} />
-
             </Routes>
         </main>
     );
