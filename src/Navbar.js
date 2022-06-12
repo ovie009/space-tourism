@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
     
-    const [slide, setSlide] = useState(true);
+    const [slide, setSlide] = useState(false);
     
     const location = useLocation();
     
@@ -30,18 +30,8 @@ const Navbar = () => {
     });
     
     const showSidebar = () => {
-        let sideBar  = document.querySelector(".sidebar");
-        let sideBarList  = document.querySelector(".sidebar-list");
         setSlide(!slide);
-        sideBarList.style.visibility = slide ? 'visible' : 'hidden';
-        // sideBar.style.width = slide ? 'block' : 'none';
-        sideBar.style.width = slide ? '75vw' : '0vw';
-        sideBar.style.left = slide ? '25vw' : '100vw';
-        sideBar.style.backdropFilter = slide ? 'blur(30px)' : 'blur(0px)';
-        console.log(slide);
     }
-
-    // showSidebar();
 
     return ( 
         <nav className="navbar">
@@ -68,14 +58,21 @@ const Navbar = () => {
                     <hr className="nav-line" />
                 </ul>
             </div>
-            <div className="sidebar">
+            <div className="sidebar" style={{
+                width : slide ? '75vw' : '0vw',
+                left : slide ? '25vw' : '100vw',
+                backdropFilter : slide ? 'blur(30px)' : 'blur(0px)',
+                transition : '350ms ease-in'
+            }}>
                 <div className="sidebar-container">
                     <div className="close-button-wrapper">
                         <button id="close-sidebar" onClick={showSidebar}>
                             <img src={close} alt="close icon" />
                         </button>
                     </div>
-                    <ul className="sidebar-list">
+                    <ul className="sidebar-list" style={{
+                        visibility : slide ? 'visible' : 'hidden'
+                    }}>
                         <li className="sidebar-list-items">
                             <Link to="/" className="side-link" onClick={showSidebar}> <strong>00</strong>  Home</Link>
                         </li>

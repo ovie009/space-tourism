@@ -41,7 +41,7 @@
     left: 100vw;
     top: 0px;
     display: block;
-    transition: 350ms;
+    transition: 1s;
 }
 
 .sidebar-container{
