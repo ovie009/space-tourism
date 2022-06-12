@@ -5,7 +5,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 100px;
+    padding-top: 120px;
 }
 
 @media screen and (min-width: 768px){
@@ -18,4 +18,236 @@
     .technology{
         background-image: url(/src/starter-code/assets/technology/background-technology-desktop.jpg);
     }
+}
+
+.technology-section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column;
+    gap: 30px;
+}
+
+.technology-section *{
+    width: 100%;
+}
+
+.technology-preview{
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.technology-preview strong{
+    margin-right: 20px;
+    color: gray;
+}
+
+.technology-image-wrapper{
+    height: 22.5vh;
+}
+
+.technology-image{
+    height: 100%;
+    object-fit: cover;
+}
+
+.technology-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    gap: 25px;
+    list-style-type: none;
+}
+
+.technology-items{
+    width: 45px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.technology-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.active-technology{
+    background-color: #FFFFFF;
+    color: black;
+}
+
+
+.inactive-technology{
+    color: #D0D6F9;
+    border: 1px solid gray;
+}
+
+.technology-subheading{
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.technology-heading{
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.technology-paragraph{
+    padding-inline: 30px;
+    text-align: center;
+    line-height: 30px
+}
+
+@media screen and (min-width: 768px) {
+    .technology{
+        padding-top: 150px;
+    }
+
+    .technology-preview{
+        text-align: left;
+        padding-inline: 50px;
+    }
+
+    .technology-image-wrapper{
+        height: 30vh;
+    }
+
+    .technology-list{
+        height: 60px;
+    }
+
+    .technology-link{
+        width: 55px;
+    }
+
+    .technology-items,.active-technology, .inactive-technology{
+        width: 60px;
+    }
+
+    .technology-paragraph{
+        max-width: 55ch;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .technology{
+        padding-top: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .technology-section{
+        display: grid;
+        margin: 0;
+        height: calc(100vh - 170px);
+        max-height: 650px;
+        grid-template-columns: 10vw 10vw 45vw 35vw;
+        grid-template-rows: 1fr 1fr .5fr 2fr 4fr 2fr;
+        grid-template-areas: 
+        ". preview preview preview"
+        ". . . image"
+        ". list subheading image"
+        ". list heading image"
+        ". list paragraph image"
+        ". . . image"
+        ;
+        place-items: center;
+        gap: 30px;
+        overflow: hidden;
+    }
+    
+    .technology-preview{
+        grid-area: preview;
+        width: 100%;
+        font-size: 30px;
+        box-sizing: border-box;
+        padding: 0;
+    }
+    
+    .technology-image-wrapper{
+        grid-area: image;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .technology-image{
+        margin-left: auto;
+        object-fit: cover;
+    }
+    
+    .technology-list{
+        grid-area: list;
+        flex-flow: column;
+        height: 100%;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    
+    .technology-items,.active-technology, .inactive-technology{
+        width: 80px;
+        font-size: 20px;
+    }
+    
+    .technology-subheading{
+        grid-area: subheading;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .technology-heading{
+        grid-area: heading;
+        width: 100%;
+        font-size: 60px;
+        text-align: left;
+    }
+    
+    .technology-paragraph{
+        grid-area: paragraph;
+        width: 100%;
+        text-align: left;
+        padding-left: 0;
+        line-height: 35px;
+        font-size: 25px;
+        max-width: 50ch;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .technology-heading{
+        font-size: 80px;
+    }
+
+    .technology-subheading{
+        font-size: 25px;
+    }
+
+    .technology-paragraph{
+        line-height: 40px;
+        font-size: 30px;
+        max-width: 45ch;
+    }
+
+    
+    .technology-items,.active-technology, .inactive-technology{
+        width: 100px;
+        font-size: 40px;
+    }
+    
 }

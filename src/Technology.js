@@ -1,32 +1,49 @@
 import './Technology.css'
-import vehicleImage from './starter-code/assets/technology/image-launch-vehicle-landscape.jpg';
+import vehicleLandscape from './starter-code/assets/technology/image-launch-vehicle-landscape.jpg';
+import vehiclePortrait from './starter-code/assets/technology/image-launch-vehicle-portrait.jpg';
 import { Link } from "react-router-dom";
+import { useState } from 'react';
 
 const Technology = () => {
+
+
+    const [mobile, setMobile] = useState(true);
+
+    const screenWidth = () => {
+        if ( screenWidth >= 1024) {
+            setMobile(false);
+        }
+    }
+
+    console.log(mobile)
+
+    screenWidth();
+
     return ( 
         <main className="technology">
             <section className="technology-section">
+                
                 <p className="technology-preview">
                     <strong>03</strong>
-                    space laung 101
+                    space launch 101
                 </p>
                 <div className="technology-image-wrapper">
-                    <img className='technology-image' src={vehicleImage} alt="" />
+                    <img className='technology-image' src={mobile ? vehiclePortrait : vehicleLandscape} alt="" />
                 </div>
                 <ul className="technology-list">
                     <li className="technology-items">
-                        <Link to="/vehicle">1</Link>
+                        <Link className='technology-link active-technology' to="/vehicle">1</Link>
                     </li>
                     <li className="technology-items">
-                        <Link to="/spaceport">2</Link>
+                        <Link className='technology-link inactive-technology' to="/spaceport">2</Link>
                     </li>
                     <li className="technology-items">
-                        <Link to="/capsule">3</Link>
+                        <Link className='technology-link inactive-technology' to="/capsule">3</Link>
                     </li>
                 </ul>
-                <h4 className="technology-subheading">
+                <p className="technology-subheading">
                     the terminology...
-                </h4>
+                </p>
                 <h4 className="technology-heading">
                     launch vehicle
                 </h4>

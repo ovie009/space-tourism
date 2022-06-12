@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 170px;
+    transition: 500ms ease-in;
 }
 
 @media screen and (min-width: 768px){
@@ -27,6 +28,7 @@
     justify-content: flex-start;
     width: 100%;
     padding-inline: 30px;
+    padding-bottom: 20px;
 }
 
 .crew-preview-text{

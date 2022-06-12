@@ -16,7 +16,7 @@
 }
 
 .logo-icon{
-    height: 50px;
+    height: 40px;
     margin-inline: 20px;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .toggle-list > img{
-    height: 30px;
+    height: 25px;
 }
 
 .sidebar{
@@ -179,6 +179,10 @@
         height: 150px;
         padding-top: 50px;
         padding-left: 50px;
+    }
+
+    .logo-icon{
+        height: 60px;
     }
     
 }
