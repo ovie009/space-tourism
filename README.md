@@ -130,5 +130,5 @@ return useSwipeable({
 
 - Ejoké - [Ejoké](https://ejovwoke.netlify.app/)
 - Dev Panda - [Dev Panda](https://devpanda.netlify.app)
-- Obaro - [Obaro](https://google.com)
+- Obaro - [Obaro](obarodev.herokuapp.com)
 - Miné - UX suggestions and helped in debugging 
