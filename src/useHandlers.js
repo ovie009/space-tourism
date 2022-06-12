@@ -16,10 +16,6 @@ const useHandlers = (linkArray, pathName) => {
                 pathName = linkArray[0];
             }
             let currentPathIndex = linkArray.indexOf(pathName);
-            // console.log(pathName)
-            // console.log(e.dir)
-
-            // console.log("🚀 ~ file: Crew.js ~ line 34 ~ Crew ~ currentPageIndex", currentPathIndex)
 
             if (swipeDirection === 'Left') {
                 targetPathIndex = currentPathIndex + 1;
