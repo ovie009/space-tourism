@@ -26,15 +26,15 @@ const useHandlers = (linkArray, pathName) => {
                 if (targetPathIndex === maxIndex) {
                     targetPathIndex = minIndex;
                 }
-                
-            } else {
+                history(linkArray[targetPathIndex]);
+            } else if (swipeDirection === 'Right'){
                 targetPathIndex = currentPathIndex - 1;
                 if (targetPathIndex < minIndex) {
                     targetPathIndex = maxIndex - 1;
                 }
+                history(linkArray[targetPathIndex]);
             }
             
-            history(linkArray[targetPathIndex]);
         }
     });
 }

@@ -5,7 +5,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 120px;
+    padding-top: 100px;
 }
 
 @media screen and (min-width: 768px){
@@ -91,6 +91,10 @@
     border: 1px solid gray;
 }
 
+.inactive-technology:hover{
+    border: 1px solid #FFFFFF;
+}
+
 .technology-subheading{
     text-align: center;
     font-weight: normal;
@@ -106,6 +110,7 @@
 
 .technology-paragraph{
     padding-inline: 30px;
+    padding-bottom: 30px;
     text-align: center;
     line-height: 30px
 }
