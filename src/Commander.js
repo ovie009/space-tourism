@@ -1,5 +1,5 @@
-import douglasHurley from './starter-code/assets/crew/image-douglas-hurley.png';
-import { Link, useLocation } from 'react-router-dom';
+import douglasHurley from './starter-code/assets/crew/image-douglas-hurley.png';  //import commander image
+import { Link, useLocation } from 'react-router-dom'; // import link and useLocation
 
 const Commander = () => {
 
@@ -7,6 +7,7 @@ const Commander = () => {
     
     let pathName = location.pathname;
 
+    // array to store crew links
     const crewLinks = [
         { id: 1, link: '/crew/commander', class: ''},
         { id: 2, link: '/crew/specialist', class: ''},
@@ -14,14 +15,16 @@ const Commander = () => {
         { id: 4, link: '/crew/engineer', class: ''}
     ]
 
+    // check if crewLink matches pathname so you give it a class of active-crew
     crewLinks.forEach(crewLink => {
         if ( pathName.startsWith(crewLink.link) ) {
             crewLink.class = 'crew-list-items active-crew';
-        }else {
+        }else { // give the others a class of inactive=crew
             crewLink.class = 'crew-list-items inactive-crew';
         }
     });
     
+    // give active-crew class to commander link by default
     if (pathName === '/crew' || pathName === '/crew/'){
         crewLinks[0].class = 'crew-list-items active-crew';
     }
@@ -33,10 +36,12 @@ const Commander = () => {
                 meet your crew
             </p>
             <div className="crew-image-wrapper">
+                {/* set image source */}
                 <img src={douglasHurley} alt="" className="crew-image" />
             </div>
             <ul className='crew-list'>
                 {
+                    // loop through crew links
                     crewLinks.map((crewLink) => (
                         <li className={crewLink.class} key={crewLink.id}>
                             <Link to={crewLink.link} className="crew-link" ></Link>
@@ -55,4 +60,5 @@ const Commander = () => {
     );
 }
  
+// export Commander
 export default Commander;
