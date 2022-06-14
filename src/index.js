@@ -21,15 +21,15 @@ root.render(
         {/* add navbar component */}
         {/* Routes */}
         <Routes>
-          <Route exact path='/' element={<App/>} > 
-            <Route exact path='/' element={<Home/>} />
-            <Route exact path='/home' element={<Home/>} />
-            <Route exact path='/destination/' element={<Destination/>}>
-              <Route exact path='/destination/' element={<Moon/>} />
-              <Route exact path='/destination/moon' element={<Moon/>} />
-              <Route exact path='/destination/mars' element={<Mars/>} />
-              <Route exact path='/destination/europa' element={<Europa/>} />
-              <Route exact path='/destination/titan' element={<Titan/>} />
+          <Route path='/' element={<App/>} > 
+            <Route path='/' element={<Home/>} />
+            <Route path='/home' element={<Home/>} />
+            <Route path='/destination/' element={<Destination/>}>
+              <Route path='/destination/' element={<Moon/>} />
+              <Route path='/destination/moon' element={<Moon/>} />
+              <Route path='/destination/mars' element={<Mars/>} />
+              <Route path='/destination/europa' element={<Europa/>} />
+              <Route path='/destination/titan' element={<Titan/>} />
             </Route>
             <Route path='/crew/*' element={<Crew/>} />
             <Route path='/technology/*' element={<Technology/>} /> 
