@@ -28,6 +28,12 @@ const Navbar = () => {
             navLink.class = 'nav-list-items inactive-page';
         }
     });
+
+    // console.log(pathName);
+
+    if (pathName === '/'){
+        navLinks[0].class = 'nav-list-items active-page';
+    }
     
     const showSidebar = () => {
         setSlide(!slide);
