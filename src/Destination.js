@@ -1,9 +1,5 @@
 import './Destination.css';
-import Moon from './Moon.js';
-import Mars from './Mars.js';
-import Europa from './Europa.js';
-import Titan from './Titan.js';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { useLocation, Outlet } from 'react-router-dom';
 import useHandlers from './useHandlers';
 
 const Destination = () => {
@@ -24,13 +20,7 @@ const Destination = () => {
 
     return ( 
         <main {...handlers} className="destination">
-            <Routes>
-              <Route path='/' element={<Moon/>} />
-              <Route path='/moon' element={<Moon/>} />
-              <Route path='/mars' element={<Mars/>} />
-              <Route path='/europa' element={<Europa/>} />
-              <Route path='/titan' element={<Titan/>} />
-            </Routes>
+            <Outlet />
         </main>
     );
 }

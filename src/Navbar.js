@@ -77,13 +77,13 @@ const Navbar = () => {
                             <Link to="/" className="side-link" onClick={showSidebar}> <strong>00</strong>  Home</Link>
                         </li>
                         <li className="sidebar-list-items">
-                            <Link to="/destination" className="side-link" onClick={showSidebar}> <strong>01</strong> destination</Link>
+                            <Link to="/destination/" className="side-link" onClick={showSidebar}> <strong>01</strong> destination</Link>
                         </li>
                         <li className="sidebar-list-items">
-                            <Link to="/crew" className="side-link" onClick={showSidebar}><strong>02</strong> crew</Link>
+                            <Link to="/crew/" className="side-link" onClick={showSidebar}><strong>02</strong> crew</Link>
                         </li>
                         <li className="sidebar-list-items">
-                            <Link to="/technology" className="side-link" onClick={showSidebar}><strong>03</strong> technology</Link>
+                            <Link to="/technology/" className="side-link" onClick={showSidebar}><strong>03</strong> technology</Link>
                         </li>
                     </ul>
                 </div>
