@@ -18,11 +18,9 @@ const Home = () => {
                         </p>
                     </div>
                     <div className="explore-wrapper">
-                        <button className="explore">
-                            <Link to="/destination/">
-                                explore
-                            </Link>
-                        </button>
+                        <Link className="explore" to="/destination/">
+                            explore
+                        </Link>
                     </div>
                 </div>
             </section>

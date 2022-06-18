@@ -61,7 +61,7 @@ const Navbar = () => {
                             </li>
                         ))
                     }
-                    <hr className="nav-line" />
+                    <li className="nav-line"></li>
                 </ul>
             </div>
             <div className="sidebar" style={{

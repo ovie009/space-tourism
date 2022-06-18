@@ -22,7 +22,7 @@
 
 .home-section{
     width: 100%;
-    height: calc(100vh - 150px);
+    min-height: calc(100vh - 150px);
     display: flex;
     align-items: center;
 }
@@ -100,9 +100,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
-.explore a{
+/* .explore a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,7 +112,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-}
+} */
 
 .explore:hover{
     box-shadow: 0 0 0 120px rgba(200, 200, 200, 0.1);
